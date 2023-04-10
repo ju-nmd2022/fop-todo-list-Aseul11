@@ -79,18 +79,18 @@ ul li {
   padding: 10px;
   position: relative;
 }
-
+/*
 ul li::after {
   content: "";
   position: absolute;
   height: 32px;
   width: 32px;
-  background-image: url(icons/unchecked.svg);
+  background-image: url(icons/checked.png);
   background-size: cover;
   background-position: center;
   right: 70px;
 }
-
+*/
 li {
   margin-left: 30px;
 }
@@ -104,6 +104,22 @@ li {
 
 .container {
   display: grid;
-  grid-template-columns: ifr;
   justify-content: center;
 }
+
+ul li.checked {
+  text-decoration: line-through;
+  color: rgb(174, 130, 40);
+}
+/*
+ul li.checked::after {
+  background-image: url(icons/unchecked.png);
+  right: 50px;
+}
+*/
+
+/*
+ <li class="checked">Flight to Sweden</li>
+            <li>Code To Do List</li>
+            <li>Call my parents</li>
+*/
