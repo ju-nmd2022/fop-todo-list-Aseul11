@@ -17,6 +17,7 @@ h1 {
   justify-content: center;
   padding-bottom: 50px;
   font-size: 40pt;
+  color: rgb(30, 30, 30);
 }
 
 .input {
@@ -46,6 +47,7 @@ h1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
   transition-duration: 0.5;
   cursor: pointer;
+  border: none;
 }
 
 .addTaskButton:hover {
@@ -53,7 +55,8 @@ h1 {
   transform: scale(1.02);
 }
 
-.wholeList {
+/*
+.list {
   display: flex;
   margin: auto;
   list-style-type: none;
@@ -62,4 +65,45 @@ h1 {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+*/
+
+ul li {
+  list-style-type: none;
+  font-size: 15pt;
+  font-weight: 600;
+  color: rgb(30, 30, 30);
+  margin-top: 15px;
+  cursor: pointer;
+  /*background-color: beige;*/
+  padding: 10px;
+  position: relative;
+}
+
+ul li::after {
+  content: "";
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  background-image: url(icons/unchecked.svg);
+  background-size: cover;
+  background-position: center;
+  right: 70px;
+}
+
+li {
+  margin-left: 30px;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  /*background-color: aqua;*/
+  width: 535px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: ifr;
+  justify-content: center;
 }
