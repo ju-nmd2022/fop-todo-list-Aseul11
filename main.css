@@ -87,11 +87,21 @@ ul li.checked {
   color: rgb(174, 130, 40);
 }
 
-/*  added line-hight and text-align (and everything looks nice now) with the help of this source: https://www.youtube.com/watch?v=G0jO8kUrg-I */
+ul li.checked::after {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  font-size: 18pt;
+  color: rgb(30, 30, 30);
+  text-align: center;
+  line-height: 40px;
+}
+
+/*  added styling for buttons with the help of this source: https://www.youtube.com/watch?v=G0jO8kUrg-I */
 ul li span {
   position: absolute;
-  right: 0;
-  top: 10px;
+  right: 10px;
+  top: 2px;
   width: 40px;
   height: 40px;
   font-size: 18pt;
