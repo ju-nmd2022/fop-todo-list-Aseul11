@@ -1,7 +1,7 @@
 // main source used for js part: https://www.youtube.com/watch?v=G0jO8kUrg-I
 
 // shows what will happen if 'add' button is clicked
-function addNewTask() {
+function addTaskButton() {
   // if input field is empty, then alert pops up:
   if (taskInput.value === "") {
     alert("Error! The input field is empty!");
