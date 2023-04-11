@@ -97,7 +97,6 @@ ul li.checked::after {
   line-height: 40px;
 }
 
-/*  added styling for buttons with the help of this source: https://www.youtube.com/watch?v=G0jO8kUrg-I */
 ul li span {
   position: absolute;
   right: 10px;
