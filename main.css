@@ -55,42 +55,18 @@ h1 {
   transform: scale(1.02);
 }
 
-/*
-.list {
-  display: flex;
-  margin: auto;
-  list-style-type: none;
-  width: 50%;
-  margin-top: 50px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-}
-*/
-
 ul li {
   list-style-type: none;
-  font-size: 15pt;
+  font-size: 16pt;
   font-weight: 600;
   color: rgb(30, 30, 30);
   margin-top: 15px;
   cursor: pointer;
-  /*background-color: beige;*/
-  padding: 10px;
+  padding-top: 10px;
   position: relative;
+  border-radius: 10px;
 }
-/*
-ul li::after {
-  content: "";
-  position: absolute;
-  height: 32px;
-  width: 32px;
-  background-image: url(icons/checked.png);
-  background-size: cover;
-  background-position: center;
-  right: 70px;
-}
-*/
+
 li {
   margin-left: 30px;
 }
@@ -98,8 +74,7 @@ li {
 .listContainer {
   display: flex;
   flex-direction: column;
-  /*background-color: aqua;*/
-  width: 535px;
+  width: 500px;
 }
 
 .container {
@@ -111,15 +86,22 @@ ul li.checked {
   text-decoration: line-through;
   color: rgb(174, 130, 40);
 }
-/*
-ul li.checked::after {
-  background-image: url(icons/unchecked.png);
-  right: 50px;
-}
-*/
 
-/*
- <li class="checked">Flight to Sweden</li>
-            <li>Code To Do List</li>
-            <li>Call my parents</li>
-*/
+/*  added line-hight and text-align (and everything looks nice now) with the help of this source: https://www.youtube.com/watch?v=G0jO8kUrg-I */
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 18pt;
+  color: rgb(30, 30, 30);
+  text-align: center;
+  line-height: 40px;
+}
+
+ul li span:hover {
+  transform: scale(1.15);
+  background-color: rgb(254, 186, 53);
+  border-radius: 10px;
+}
