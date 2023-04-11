@@ -1,8 +1,5 @@
 // implemented some js part ideas from this video to my code: https://www.youtube.com/watch?v=G0jO8kUrg-I
 
-const taskInput = document.getElementById("taskInput");
-const listContainer = document.getElementById("listContainer");
-
 // shows what will happen if 'add' button is clicked
 function addTaskButton() {
   // if input box is empty, then alert pops up:
@@ -20,6 +17,7 @@ function addTaskButton() {
 
   // clearing the input field after adding task to the list:
   taskInput.value = "";
+  savingData();
 }
 
 // when clicking on the task it will be marked as finished (line-through); got an idea how to do that from this source: https://www.w3schools.com/howto/howto_js_todolist.asp
@@ -28,9 +26,22 @@ listContainer.addEventListener(
   function (ev) {
     if (ev.target.tagName === "LI") {
       ev.target.classList.toggle("checked");
+      savingData();
+      // making 'close' button delete the task element
     } else if (ev.target.tagName === "SPAN") {
       ev.target.parentElement.remove();
+      savingData();
     }
   },
   false
 );
+
+// save tasks in local storage
+function savingData() {
+  localStorage.setItem("data", listContainer.innerHTML);
+}
+
+function showTaskList() {
+  listContainer.innerHTML = localStorage.getItem("data");
+}
+showTaskList();
